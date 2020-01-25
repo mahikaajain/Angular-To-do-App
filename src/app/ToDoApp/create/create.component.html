@@ -1,0 +1,23 @@
+<br>
+<br>
+<mat-card>
+   <div class="example-container">
+     <mat-form-field >
+      <input matInput placeholder="Title" [(ngModel)]="enteredTitle">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput #input maxlength="150"  placeholder=" Content " rows="3" [(ngModel)]="enteredContent"></textarea>
+      <mat-hint align="end">{{input.value?.length || 0}}/150</mat-hint>
+    </mat-form-field>
+   
+    
+    
+  </div>
+  <p align="center">
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="onAddList()">Save</button>
+  </p>
+</mat-card>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+<main>
+    
+<app-create (listCreated)="onListAdded($event)"></app-create>
+<br>
+<app-display [lists]="storedLists"></app-display>
+
+</main>

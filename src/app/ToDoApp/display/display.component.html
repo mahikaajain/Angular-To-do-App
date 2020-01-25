@@ -1,0 +1,22 @@
+
+<mat-accordion multi="true" *ngIf="lists.length > 0"> <!--multi allows to open more then 1 accordion-->
+    <mat-expansion-panel *ngFor="let list of lists,let i=index">
+   
+      <mat-expansion-panel-header>
+  
+       <p > {{list.title}}</p> 
+      </mat-expansion-panel-header>
+        
+    <button mat-stroked-button  (click)="lists.splice(i,1)" color="warn">Delete</button>
+    <p>{{list.content}}  </p>
+  
+  </mat-expansion-panel>
+  <br>
+  
+  <p align="center">
+  <button mat-raised-button (click)="removeFromList($event)" color="accent">Delete All</button>
+</p> </mat-accordion>
+  
+  
+  <p align="center" class="infotext mat-body-1" *ngIf="lists.length<=0">No task Added Yet! </p>
+  
